@@ -1,0 +1,136 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9;
+}
+
+.toolbar {
+    background-color: #1f4e5f;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.toolbar select,
+.toolbar button,
+.toolbar input[type="file"],
+.toolbar input[type="color"] {
+    padding: 8px 10px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.toolbar button {
+    background-color: white;
+    color: #1f4e5f;
+    font-weight: bold;
+    border: 1px solid #ccc;
+}
+
+.toolbar button:hover {
+    background-color: #dceef3;
+}
+
+.toolbar-icon-button {
+    background-color: white;
+    color: #1f4e5f;
+    font-size: 16px;
+    border: none;
+    padding: 6px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.toolbar-icon-button:hover {
+    background-color: #cfe9f2;
+    transform: scale(1.05);
+}
+
+
+.new-sheet-btn {
+    background-color: #ffffff;
+    color: #1f4e5f;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 8px 14px;
+    border: 2px solid #1f4e5f;
+}
+
+.new-sheet-btn:hover {
+    background-color: #1f4e5f;
+    color: white;
+}
+
+
+.sheet-container {
+    padding: 20px;
+    overflow: auto;
+}
+
+.spreadsheet {
+    display: grid;
+    grid-template-columns: 40px repeat(26, 100px); /* A-Z */
+    border: 1px solid #ddd;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+
+
+.cell,
+.header {
+    border: 1px solid #ccc;
+    padding: 8px;
+    box-sizing: border-box;
+    min-height: 30px;
+    font-size: 14px;
+    text-align: left;
+    outline: none;
+}
+
+.header {
+    background-color: #e6f2f5;
+    font-weight: bold;
+    text-align: center;
+    color: #1f4e5f;
+}
+
+.row-header {
+    grid-column: 1;
+    background-color: #dbeaf0;
+    text-align: center;
+    font-weight: bold;
+    color: #1f4e5f;
+}
+
+.cell:focus {
+    background-color: #f0f9ff;
+    border: 2px solid #1f4e5f;
+}
+
+
+.sheet-container::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.sheet-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.sheet-container::-webkit-scrollbar-thumb {
+    background: #1f4e5f;
+    border-radius: 10px;
+}
+
+.sheet-container::-webkit-scrollbar-thumb:hover {
+    background: #163944;
+}
